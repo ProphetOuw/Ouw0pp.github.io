@@ -33,3 +33,4 @@ You shall follow the front end framework
 The more you do it, the easier it gets. Your job is to reskin or create skills using the work of a front end developer.
 !!!question "'Why bother with implementing skills to the framework when i already made 250K robux per skill xD'"
     In order to make that 250K robux you would of had made somewhat of a backend for the skill, why not just use a specific framework and make some extra money? And it takes Ouw 30mins to 1 hour to implement a skill, imagine making up to 550 dollars for 30 minutes worth of work.
+    
