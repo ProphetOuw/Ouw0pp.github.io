@@ -365,7 +365,7 @@ To get the value folder of a player or npc u use the function
 local Utility = require(game.ReplicatedStorage:WaitForChild("CAM"):WaitForChild("Global"):WaitForChild("Utility"))
 vicvalues = Utility:getvaluesfolder(plrcharacter or npc/victim character)
 ```
-##Getting a skill's status(Last used, or when if it's being used)
+##Getting a skill's status(Last used, or if it's being used)
 ```lua
 local manage_cd = require(game.ServerStorage:WaitForChild("SAM"):WaitForChild("Game_Play"):WaitForChild("manage_cd"))
 local lastUsed,isBeingUsed = manage_cd:skillStatus(plr,string: skill name) 
