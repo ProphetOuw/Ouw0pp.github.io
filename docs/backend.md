@@ -310,7 +310,7 @@ end)
 task.wait(pos1)
 canceldestroy()
 ```
-If duration is not specified, it will assume a default value. calling the canceldestroy variable is optional, it is automatically called after the duration is competed
+If duration is not specified, it will assume a default value. calling the canceldestroy variable is optional, it is automatically called after the duration is completed
 !!!Note "Note"
     this module can be ran outside of the skill framework, and can be ran on both the client and server.
 ##Casting a hitbox
