@@ -365,6 +365,12 @@ To get the value folder of a player or npc u use the function
 local Utility = require(game.ReplicatedStorage:WaitForChild("CAM"):WaitForChild("Global"):WaitForChild("Utility"))
 vicvalues = Utility:getvaluesfolder(plrcharacter or npc/victim character)
 ```
+##Getting a skill's status(Last used, or when if it's being used)
+```lua
+local manage_cd = require(game.ServerStorage:WaitForChild("SAM"):WaitForChild("Game_Play"):WaitForChild("manage_cd"))
+local lastUsed,isBeingUsed = manage_cd:skillStatus(plr,string: skill name) 
+```
+You can use this on remote toggle or passive toggle skills to measure the last time said skill was used.
 ##Updrafting
 Many skills will have the ability to propell a player, or a player and the victim being attacked into the air, we use two other functions within Combat_Util to achieve this.
 ###Updrafting one entity
