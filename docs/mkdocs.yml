@@ -1,4 +1,11 @@
 site_name: Ouw Productions frameworks
+extra:
+  head:
+    - '<meta property="og:title" content="Introduction - Ouw Productions frameworks">'
+    - '<meta property="og:description" content="Documentation for Ouw Productions frameworks">'
+    - '<meta property="og:image" content="URL_to_an_image.png">'
+    - '<meta property="og:url" content="https://11ouw0pp11.github.io/Ouw0pp.github.io/">'
+    - '<meta property="og:type" content="website">'
 theme:
   name: material
   features:
