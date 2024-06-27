@@ -110,7 +110,7 @@ end
 ]]
 return module
 ```
-As you cna see here, the Id variable's value is a table instead of a numeric value. This is because multiple players use the same module on the server, so to get the Id for a specific player you'd get it like this:
+As you can see here, the Id variable's value is a table instead of a numeric value. This is because multiple players use the same module on the server, so to get the Id for a specific player you'd get it like this:
 ```lua
 local Id = module.Id[plr]
 ```
