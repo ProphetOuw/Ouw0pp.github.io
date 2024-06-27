@@ -31,7 +31,7 @@ A 28,571 Robux - 57,143 Robux bonus, or its equivalence in usd will be given to 
 You shall follow the front end framework
 #### My task as a skill implementing backend developer
 The more you do it, the easier it gets. Your job is to reskin or create skills using the work of a front end developer.
-### Advantages of a backend skill implementer/a front end who also implements skills
+#### Advantages of a backend skill implementer/a front end who also implements skills
 Your chances of getting rehired/retain a permenant position on the team will sky rocket
 !!!question "'Why bother with implementing skills to the framework when i already made 250K robux per skill xD'"
     In order to make that 250K robux you would of had made somewhat of a backend for the skill, why not just use a specific framework and make some extra money? And it takes Ouw 30mins to 1 hour to implement a skill, imagine making up to 550 dollars for 30 minutes worth of work.
