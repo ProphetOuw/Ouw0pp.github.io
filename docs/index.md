@@ -25,5 +25,11 @@ The individual that'll determine the level of cleanelyness for your code may be 
  - 0 Robux or $0 - No consideration/left it up to someone else
  - 14,286 Robux or $50 - Minor changes need to be made to your code in order to adjust it for gameplay
  - 28,571 Robux or $100 - Skill is good gameplay wise
+
+A 28,571 Robux - 57,143 Robux bonus, or its equivalence in usd will be given to all of the skills of your first moveset.
+#### My task as a front end developer
+You shall follow the front end framework
+#### My task as a skill implementing backend developer
+The more you do it, the easier it gets. Your job is to reskin or create skills using the work of a front end developer.
 !!!question "'Why bother with implementing skills to the framework when i already made 250K robux per skill xD'"
     In order to make that 250K robux you would of had made somewhat of a backend for the skill, why not just use a specific framework and make some extra money? And it takes Ouw 30mins to 1 hour to implement a skill, imagine making up to 550 dollars for 30 minutes worth of work.
