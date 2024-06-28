@@ -63,7 +63,7 @@ end
 function module:After_Server_Hold_Signal(plr)
 	
 end
-function module:Toggle(plr,mouseposition,counterie) --toggle skill(Uses RS>Cam>Global>Subsets>Gameplay>ToggleSkill)
+function module:Toggle(plr,mouseposition,counterie) --toggle skill(Uses RS>Cam>Global>Subsets>Gameplay>SkillPassiveToggleSignal)
 	print("client tog")
 end
 function module:After_Server_Unhold_Signal(plr)
