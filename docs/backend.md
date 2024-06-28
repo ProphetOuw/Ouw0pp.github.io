@@ -156,7 +156,7 @@ local ph = require(game.ReplicatedStorage:WaitForChild("CAM"):WaitForChild("Clie
 local mouse_pos = ph:mousepos(max depth(Optional))
 ```
 ##Getting mouse position on the server
-This is tricky because it uses both the server and the client module script. It creates a part on the server that the player has network ownership over, Then in the client module, that part's position is updated to the mouse position, since the player has network ownership over it, the position will also updated on the server.
+This is tricky because it uses both the server and the client module script. It creates a part on the server that the player has network ownership over, Then in the client module, that part's position is updated to the mouse position, since the player has network ownership over it, the position will also be updated on the server.
 ###Step 1: Creating the part on server script
 We can create the part using the following module in the following way
 ```lua title="Some skill server script"
