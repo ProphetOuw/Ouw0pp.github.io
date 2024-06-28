@@ -4,10 +4,10 @@ If you're only assignment is to make the frontend for a specific skill or movese
  - Effect modules should contain effects and only effects, you will not maneuver or do anything with the character in the effects modules, that’s to be done in a separate script.
  - Front end developers must follow the front end layout/instructions listed in this page
  - If you do not have access to the group inventory, you will upload animations/sounds to your own inventory. If you are uploading animations, make sure to leave the keyframe sequence within the animation instance so that we may reupload it to the Ouw productions group.
- - Make sure the sounds have max distances, if ur not sure what to set it to, Set it to 200.
-<figure markdown="span">
+ <figure markdown="span">
 ![Image](imgs/animsequence.png){ width="100%" align="left"}
 </figure>
+ - Make sure the sounds have max distances, if ur not sure what to set it to, Set it to 200.
 ##Effect modules placement(For Front-ends/Back-ends working with the OP framework)
  Effect modules are to be placed in the folder called "Effets" in replicated storage. Wether you choose to put them in a already existing folder, or create a folder for a new set of skills does not matter and is up to you. But if you are working on a new moveset, it is strongly recommended that you create a new folder for said moveset.
 <figure markdown="span">
