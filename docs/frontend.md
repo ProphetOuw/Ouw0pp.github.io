@@ -48,6 +48,9 @@ return function(character,state)
     if projectile == nil then return end;
     projectile = projectile:FindFirstChild("MainPart")
     if projectile == nil then return end; -- this may be repeated at different parts of the code to prevent erroring.
+
+    --do stuff
+
 end)
 ```
 #### Effects helpers and utility modules
