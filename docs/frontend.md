@@ -53,6 +53,16 @@ return function(character,state)
 
 end)
 ```
+For parts that are within the character that is casting a skill, or that aren't created by the server skill script, you musnt use waitforchild for them, can directely check if they exist.
+```lua title="In Fireball client effect module"
+return function(character,state)
+    local root = character:FindFirstChild("HumanoidRootPart")
+    if root == nil then return end;
+
+    --do stuff
+
+end)
+```
 #### Effects helpers and utility modules
  Camera shaker, and crater module will be provided to you(None OP framework), these are one of the only modules you shall require within the effects modules.
  If you want to use other modules, for OP framework, check if that module you want already exists in the following folder(Different crater modules are within the "Craters" folder)
