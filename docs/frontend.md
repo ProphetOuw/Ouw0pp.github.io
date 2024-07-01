@@ -53,7 +53,7 @@ return function(character,state)
 
 end)
 ```
-For parts that are within the character that is casting a skill, or that aren't created by the server skill script, you musnt use waitforchild for them, can directely check if they exist.
+For parts that are within the character that is casting a skill, or that aren't created by the server skill script, you must not use waitforchild for them, you can just can directely check if they exist.
 ```lua title="In Fireball client effect module"
 return function(character,state)
     local root = character:FindFirstChild("HumanoidRootPart")
