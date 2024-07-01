@@ -41,7 +41,7 @@ end
 ```
 If you aren't working with the OP framework, just create some random folder in workspace, name it accordingly, make it so it would be easier for us to replace that instance code block with the one above.
 #### Streaming enabled
- This game uses streaming enabled for better performance. This means that if you're sending basepart instances within ur parameters to the client module you have to wait for those parts and then check if they exist.
+ This game uses streaming enabled for better performance. This means that you don't send basepart instances within ur parameters to the client module you have to wait for those parts(with a max wait time) from a model parent(Because models don't get streamed out) and then check if they exist.
 ```lua title="In Fireball client effect module"
 return function(character,state)
     local projectile = character:WaitForChild("ProjectileParentModel",2)
