@@ -140,6 +140,28 @@ The "RE" stands for "Remote Event" you can switch out to "RF" which stands for "
 ```lua
 game.ReplicatedStorage.Communication.CnC.ClientEffects:Fire("effect module name",param1,param2,...,paramn)
 ```
+##Preventing 2 players hitting each other at once(Hit priority handler)
+```lua
+local hit_priority_handler = game.ServerStorage:WaitForChild("SAM"):WaitForChild("Game_Play"):WaitForChild("hit_priority_handler")
+--assume some victimvalues,and playervalues variables exist.
+local initiated = hit_priority_handler:New(script) --initiates the hit priority for the script
+
+initiated:Exists(victimvalues,"choosing") --checks if a value named "choosing exists in the victim values
+
+initiated:Add(plrvalues,"choosing",.1) --adds a value in the playervalues folder for .1 seconds, this value grants an iframe like behaviour for skills that do the "Exists" check.
+
+initiated:Both(vicvalues,_settings: {lifetime: constant , name: string,add: boolean}) --this checks if the value exists in the victim values, if it does then, it returns true letting the script know that the victim/target has priority, if it doesn't exist then it adds the value into _settings.pv which is the player values folder, letting every other attacker that the player has priority.
+
+--Example use case:
+for i,v in pairs(models) do
+   if hit_priority_handler.Both(vicvalues,{pv = plrvalues,name = "Choosing_1"}) == true then continue end;
+   --v has no priority since the "Choosing_1" value does not exist inside of vicvalues
+end
+
+```
+!!!Success "The importance of this procedure/module"
+	"This module prevents players hitting each other at once, which helps the combat feel good. It is mandatory in most if not all skills"
+
 ##Forcing a skill action(Hold,Unhold,Cancel)
  Hold Will only work if there are no other skills being held, and will work like a tap. unHold and Cancel will only work if said skill is being held.
 ```lua title="Some server script"
