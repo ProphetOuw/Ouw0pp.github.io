@@ -40,6 +40,16 @@ if Effects == nil then
 end
 ```
 If you aren't working with the OP framework, just create some random folder in workspace, name it accordingly, make it so it would be easier for us to replace that instance code block with the one above.
+#### Streaming enabled
+ This game uses streaming enabled for better performance. This means that if you're sending basepart instances within ur parameters to the client module you have to wait for those parts and then check if they exist.
+```lua title="In Fireball client effect module"
+return function(character,state)
+    local projectile = character:WaitForChild("ProjectileParentModel",2)
+    if projectile == nil then return end;
+    projectile = projectile:FindFirstChild("MainPart")
+    if projectile == nil then return end; -- this may be repeated at different parts of the code.
+end)
+```
 #### Effects helpers and utility modules
  Camera shaker, and crater module will be provided to you(None OP framework), these are one of the only modules you shall require within the effects modules.
  If you want to use other modules, for OP framework, check if that module you want already exists in the following folder(Different crater modules are within the "Craters" folder)
@@ -67,7 +77,7 @@ return function(player,state,direction)
 end
 ```
 !!!note "Note"
-    Proper sanity checks to ensure that all the parameters that are needed exist should be done beforehand.
+    Proper sanity checks to ensure that all the parameters that are needed exist should be done beforehand. if we account for streaming enabled, make sure that instances passed within your parameters are not mandatory to run the cancel state.
 ####Approach to canceable skill effects
  Although there are many ways a cancelable skill can be done, I prefer this simple approach instead, if you have any suggestions, run them by me first.
 !!!Info "Important Info"
