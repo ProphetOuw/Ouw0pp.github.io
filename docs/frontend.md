@@ -47,7 +47,7 @@ return function(character,state)
     local projectile = character:WaitForChild("ProjectileParentModel",2)
     if projectile == nil then return end;
     projectile = projectile:FindFirstChild("MainPart")
-    if projectile == nil then return end; -- this may be repeated at different parts of the code.
+    if projectile == nil then return end; -- this may be repeated at different parts of the code to prevent erroring.
 end)
 ```
 #### Effects helpers and utility modules
