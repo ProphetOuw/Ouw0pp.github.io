@@ -150,7 +150,7 @@ initiated:Exists(victimvalues,"choosing") --checks if a value named "choosing ex
 
 initiated:Add(plrvalues,"choosing",.1) --adds a value in the playervalues folder for .1 seconds, this value grants an iframe like behaviour for skills that do the "Exists" check.
 
-initiated:Both(vicvalues,_settings: {lifetime: constant , name: string,add: boolean}) --this checks if the value exists in the victim values, if it does then, it returns true letting the script know that the victim/target has priority, if it doesn't exist then it adds the value into _settings.pv which is the player values folder, letting every other attacker that the player has priority.
+initiated:Both(vicvalues,_settings: {lifetime: constant , name: string,add: boolean}) --this checks if the value exists in the victim values, if it does then, it returns true letting the script know that the victim/target has priority, if it doesn't exist then it adds the value into _settings.pv(if it hasn't already been added)which is the player values folder, letting every other attacker know that the player has priority.
 
 --Example use case:
 for i,v in pairs(models) do
