@@ -95,7 +95,7 @@ end
 ####Approach to canceable skill effects
  Although there are many ways a cancelable skill can be done, I prefer this simple approach instead, if you have any suggestions, run them by me first.
 !!!Info "Important Info"
-    Skills with many states, and no yields may not require a cancelation procedure. If a yield in the effects doesn't last too long, you shall perform the cancel procedure after the duration is completed.
+    Skills with many states, and no yields may not require a cancelation procedure. If a yield in the effects doesn't last too long, you shall perform the cancel procedure after the duration is completed. If you are disabling effects first, make sure to rename the folder so that if the skill was used twice and it is being canceld for the second time, FindFirstChild doesn't get the same folder.
 ```lua title="Within the Fireball effects module"
 return function(player,character,state)
 	local itemname = "canceled##"..plr.Name..plr.UserId --make sure the name is unique so that it doesn't cancel for other players
