@@ -115,6 +115,8 @@ return function(player,character,state)
 	end	
 end
 ```
+!!!Question "WHY DO IT LIKE THIS??"
+	If you use tables, and other single state methods, this will make it so that if the skill is used multiple times, it only cancels one occurrence.
 if you want to make sure it cancels previous effects before any state is ran, you can do this like this(Notice how the cancel code block is ran before any state checks)
 ```lua title="Within Fireball module"
 return function(player,character,state)
