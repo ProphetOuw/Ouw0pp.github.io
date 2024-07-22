@@ -179,7 +179,7 @@ local ph = require(game.ReplicatedStorage:WaitForChild("CAM"):WaitForChild("Clie
 local mouse_pos = ph:mousepos(max depth(Optional))
 ```
 ##Projectile skills guide
-Projectiles are done using shape casting or touched, up to you. You would create an invisible projectile on the server, then on the client do the same exact calculations, with same velocities, and starting position, but this time it will be the actual projectile. When a hit is registered on the client, all it will do is play the collision effect, on the server you will cast a hitbox when the invisible projectile's collision is registered.
+Projectiles are done using shape casting or touched, up to you. You would create an invisible projectile on the server, then on the client do the same exact calculations, with same velocities, and starting position, but this time it will be the actual projectile. When a hit is registered on the client, all it will do is play the collision effect, on the server you will cast a hitbox when the invisible projectile's collision is registered. **YOU MAY DO THIS YOUR OWN WAY, BUT U MUST ALWAYS INCLUDE THE METHOD BELOW WITH PROJECTILES(Checker module method).**
 !!!Note "Important note"
 	If you're using touched, raycasting, or shapecasting to register a projectile collision, if that collision belongs to a Humanoid, make sure you check if that humanoid is available by using the checker module, if the return isn't nil then u can register the collision
 ```lua
