@@ -11,9 +11,9 @@ Front end developers will get paid 250K per skill. If you are working with someo
 ### Skill-implementation payment
 If you are also a front end developer, these payments will be given ontop of the payment stated in the previous block.
 #### Rates
- - 28,571 Robux or $100 - Easy skill
- - 57,143 Robux or $200 - Medium Skill
- - 85,714 Robux or $300 - Hard Skill
+ - 57,143 Robux or $200 - Easy skill
+ - 85,714 Robux or $300 - Medium Skill
+ - 114,286 Robux or $400 - Hard Skill
 
 The difficulty in which a skill is assumed may change before or after the implementation is done, And it may change depending on the amount of work you'd have to do. If you are provided with resources, this may change the assumed difficulty.
 #### Code cleanelyness Bonus
