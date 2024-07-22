@@ -192,10 +192,10 @@ if results ~= nil and results.Instance ~= nil then
 end
 if hit ~= nil then
 	local victim = Utility:find_character_from_descendant(hit) -- does a couple repetitions until it gets to a humanoid from the child
-	if victim == nil then return end;
-	if victim and victim == character then return end;tring) ->
+	if victim == nil then return/continue end;
+	if victim and victim == character then return/continue end;tring) ->
 	--** IMPORTANT
-	if checker:check_victim(script.Parent:GetFullName(),character,victim) == nil then return end;
+	if checker:check_victim(script.Parent:GetFullName(),character,victim) == nil then return/continue end;
 	--**
 end
 ```
