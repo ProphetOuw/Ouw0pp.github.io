@@ -35,7 +35,7 @@ This is how the skill sets/movesets are set up. If you are to add your own moves
 ```
 !!!info "Skills_Stats"
     Ignore Skill_Stats right now, it will help us with important backend modules/skill behaviour later.
-To equip said moveset to be tested you change the following variable within the module to correspond with the moveset index
+To equip said moveset to be tested you change the default index in the skillset variable within the character_profile module to correspond with the moveset index, you can also set it to be unique to you by making the index your username.
 <figure markdown="span">
 ![Image](imgs/Skillset.png){ width="100%" align="left"}
 </figure>
