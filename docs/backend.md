@@ -41,7 +41,7 @@ To equip said moveset to be tested you change the default index in the skillset 
 </figure>
 After that the skills should now be in the framework and ready to be tested/used.
 ##Custom characters/weapons for movesets
-You can also use custom starter characters for moveset, just rename the animation rig to the index of the moveset and parent it into the folder below...
+You can also use custom starter characters for movesets, just rename the animation rig to the index of the moveset and parent it into the folder below...
 <figure markdown="span">
 ![Image](imgs/customchars.png){ width="100%" align="left"}
 </figure>
