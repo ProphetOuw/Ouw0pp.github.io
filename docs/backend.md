@@ -441,7 +441,7 @@ Since not every cutscene skills will be casted similarly i will only explain the
 
 - Get the cframe of where it connected.
 - Cast a hitbox(If necessary) and loop through all the captured victims
-- Create invisible anchored parts that will be cframed according to the animation in which you will weld the caster and the victim, they must be on two seperate parts that respect the animation initial positioning.
+- Create invisible anchored parts that will be cframed according to the animation in which you will weld the caster and the victim, they must be on two or more seperate parts that respect the animation initial positioning. Each entity/target will have its own part so that when one dies they don't all die.
 - Make sure you aren't creating the caster's anchored part within the loops,if you do, then add sanity checks to make sure it only creates one part
 - Add Stuns,iframes,pause_gameplay2 values that'll last the length of the cutscene, you will give them max existence duration and delete them when necessary.
 - Play the animaiton for both the caster and the victim
