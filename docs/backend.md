@@ -421,7 +421,7 @@ local lastUsed,isBeingUsed = manage_cd:skillStatus(plr,string: skill name)
 ```
 You can use this on remote toggle or passive toggle skills to measure the last time said skill was used.
 ##The importance of pause gameplay value/function yielding
-When the character is not able to do anything(combat,dash,cast skills) this is called "paused gameplay". This happens when the player s holding a skill or when a player unholds a skill and there are yields in the unhold function. When the aren't any yields u can exhibit the same behaviours by adding a value named "pause_gameplay" in the player values, this will ensure that the player is not able to dodge,combat,etc while a sequence of event is still happening in the unhold function.
+When the character is not able to do anything(combat,dash,cast skills) this is called "paused gameplay". This happens when the player is holding a skill or when a player unholds a skill and there are yields in the unhold function. When the aren't any yields u can exhibit the same behaviours by adding a value named "pause_gameplay" in the player values, this will ensure that the player is not able to dodge,combat,etc while a sequence of event is still happening in the unhold function.
 ```lua title="Example"
 local plrvalues = Utility:getvaluesfolder(character)
 local pause_gameplay = Instance.new("BoolValue")
