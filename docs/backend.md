@@ -234,6 +234,33 @@ You can either let the duration run out, and the part auto deletes itself or del
 local SM = require(game.ServerStorage:WaitForChild("SAM"):WaitForChild("Services"):WaitForChild("Server_Mouse_Pos"))
 SM:Delete_Pos_Part(Character,name of the part)
 ```
+##Debris module / deleting / destroying
+I have a custom module that replaces debris and acts as a destroyer
+```lua
+local DebrisModule = require(game.ReplicatedStorage:WaitForChild("CAM"):WaitForChild("DebrisModule"))
+DebrisModule:AddItem(item,duration)
+```
+Here's the source code for the module for you to use, do not add this code into any of the effects module or skill modules(require it instead). I already have this module.
+```lua
+local mod = {
+  Debris = {}
+}
+function mod:Clean(item)
+    if mod.Debris[item] then
+        task.cancel(mod.Debris[item])
+    end
+end
+function mod:AddItem(item,duration)
+    if item == nil then return end;
+    self:Clean(item)
+    self.Debris[item] = task.delay(duration or 5,function()
+        if item ~= nil then
+            item:Destroy()
+        end
+    end)
+end
+return mod
+```
 ## Timed server/client skill communication portal
 I have created a module, that lets u create a server client communication portal that lasts a set duration, this could be used during skills, it can also remove some purpose from the force skill action mechanic. The portal must be created on the server in the following manner
 ```lua title="Some server script"
