@@ -16,7 +16,33 @@ If you're only assignment is to make the frontend for a specific skill or movese
 </figure>
 !!!info "OP framework"
     The acronym "OP" stands for "Ouw Productions"
-
+##Debris module / deleting / destroying
+I have a custom module that replaces debris and acts as a destroyer
+```lua
+local DebrisModule = require(game.ReplicatedStorage:WaitForChild("CAM"):WaitForChild("DebrisModule"))
+DebrisModule:AddItem(item,duration)
+```
+Here's the source code for the module for you to use, do not add this code into any of the effects module or skill modules(require it instead). I already have this module.
+```lua
+local mod = {
+  Debris = {}
+}
+function mod:Clean(item)
+    if mod.Debris[item] then
+        task.cancel(mod.Debris[item])
+    end
+end
+function mod:AddItem(item,duration)
+    if item == nil then return end;
+    self:Clean(item)
+    self.Debris[item] = task.delay(duration or 5,function()
+        if item ~= nil then
+            item:Destroy()
+        end
+    end)
+end
+return mod
+```
 ##Effect module instructions
  The name of the module should correlate with the skill in which it is for.
 <figure markdown="span">
