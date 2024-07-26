@@ -164,7 +164,7 @@ for i,v in pairs(models) do
 end
 
 ```
-The initiated:Both(...) function first checks if the value exists in the victim values, if it does then, it returns true letting the script know that the victim/target has priority, if it doesn't exist then it adds the value into _settings.pv(if it hasn't already been added)which is the player values folder, letting every other attacker know that the player has priority.
+The initiated.Both(...) function first checks if the value exists in the victim values, if it does then, it returns true letting the script know that the victim/target has priority, if it doesn't exist then it adds the value into _settings.pv(if it hasn't already been added)which is the player values folder, letting every other attacker know that the player has priority.
 !!!Success "The importance of this procedure/module"
 	This module prevents players hitting each other at once, which helps the combat feel good. It is mandatory in most if not all skills
 
