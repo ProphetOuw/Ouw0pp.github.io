@@ -420,6 +420,15 @@ local manage_cd = require(game.ServerStorage:WaitForChild("SAM"):WaitForChild("G
 local lastUsed,isBeingUsed = manage_cd:skillStatus(plr,string: skill name) 
 ```
 You can use this on remote toggle or passive toggle skills to measure the last time said skill was used.
+##The importance of pause gameplay value/function yielding
+When the character is not able to do anything(combat,dash,cast skills) this is called "paused gameplay". This happens when the player s holding a skill or when a player unholds a skill and there are yields in the unhold function. When the aren't any yields u can exhibit the same behaviours by adding a value named "pause_gameplay" in the player values, this will ensure that the player is not able to dodge,combat,etc while a sequence of event is still happening in the unhold function.
+```lua title="Example"
+local plrvalues = Utility:getvaluesfolder(character)
+local pause_gameplay = Instance.new("BoolValue")
+pause_gameplay.Name = "pause_gameplay"
+pause_gameplay.Parent = plrvalues
+DebrisModule:AddItem(pause_gameplay,1.4)
+```
 ##Updrafting
 Many skills will have the ability to propell a player, or a player and the victim being attacked into the air, we use two other functions within Combat_Util to achieve this.
 ###Updrafting one entity
@@ -443,7 +452,7 @@ Since not every cutscene skills will be casted similarly i will only explain the
 - Cast a hitbox(If necessary) and loop through all the captured victims
 - Create invisible anchored parts that will be cframed according to the animation in which you will weld the caster and the victim, they must be on two or more seperate parts that respect the animation initial positioning. Each entity/target will have its own part so that when one dies they don't all die.
 - Make sure you aren't creating the caster's anchored part within the loops,if you do, then add sanity checks to make sure it only creates one part
-- Add Stuns,iframes,pause_gameplay2 values that'll last the length of the cutscene, you will give them max existence duration and delete them when necessary.
+- Add Stuns,iframes,pause_gameplay values that'll last the length of the cutscene, you will give them max existence duration and delete them when necessary.
 - Play the animaiton for both the caster and the victim
 - Get the camera rig, play animation on it, then use the camera module to stick the player and victim's cameras to the animaiton rig
 ```lua
