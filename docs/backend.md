@@ -478,6 +478,8 @@ A storage for serversided module scripts for skills, This can only be used on th
 local skillStorage = require(game.ServerStorage.SAM.Utility.SkillStorage)
 --When u want to access a storage table for a skill
 local storageTable = SkillStorage:GetID(plr,skillname)
+--Empty the table
+local storageTable = SkillStorage:ResetId(plr,skillname)
 --When ur done with it
 SkillStorage:ClearID(plr, skillname)
 ```
