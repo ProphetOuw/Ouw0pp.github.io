@@ -483,7 +483,7 @@ local storageTable = SkillStorage:ResetId(plr,skillname)
 --When ur done with it
 SkillStorage:ClearID(plr, skillname)
 ```
-By default, the skill storage for a skill will be the last parameter on the server functions, the framework will automatically create it for you. It is cleared when the player leaves, otherwise you'd have to clean it manuelly. It is available on the Hold, unhold, and cancel function. You may print it to test if it is there, if a table is printed then it is there. **Remember that the second parameter is always the player's mouse position**.
+By default, the skill storage for a skill will be the last parameter on the server functions, the framework will automatically create it for you, This table is unique to the player(Other players can't access it). It is cleared when the player leaves, otherwise you'd have to clean it manuelly. It is available on the Hold, unhold, and cancel function. You may print it to test if it is there, if a table is printed then it is there. **Remember that the second parameter is always the player's mouse position**.
 <figure markdown="span">
 ![Image](imgs/skillstorage.png){ width="100%" align="left"}
 </figure>
