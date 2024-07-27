@@ -403,6 +403,37 @@ for i,v in pairs(Models) do
     end
 end
 ```
+There is also a hitbox casting function that does most of the work for you, it wraps the GetModelInRegion function.
+```lua
+local hitDetected = function(target: Model, targetValues, targetState: 'Blocking' | 'Perfect' | true)
+	local targetHumanoid = target:FindFirstChild('Humanoid') :: Humanoid
+	local targetRoot = targetHumanoid.RootPart :: BasePart
+	--
+	local targetAnimator = targetHumanoid:FindFirstChild('Animator')
+	
+	if targetState == 'Perfect' then
+		combatUtility:Perfect(script:GetFullName(), character, target)
+	elseif targetState == 'Blocking' then
+		combatUtility:Block(script:GetFullName(), character, target, BLOCK_DAMAGE)
+	elseif targetState == true then
+		
+	end
+end
+
+--
+utility:CreateHitbox({
+	caster = character,
+	
+	hitboxSize = HITBOX_SIZE, --size
+	hitboxCFrame = goal, --center
+	
+	hitPriorityHandler = {callback = hitPriorityHandler.Both, data = { pv = characterValues, name = 'Choosing_1' }}, --mandatory
+	checker = checker, -- checker module
+	
+	hitDetected = hitDetected --function to fire pe4r target
+})
+```
+It does priority checks, and lets you customize it more so that ur code is cleaner.
 ##Checking if a captured enemy is damageable
 You must use the checker module to check if a captured enemy is damageable
 ```lua
@@ -441,6 +472,19 @@ To get the value folder of a player or npc u use the function
 local Utility = require(game.ReplicatedStorage:WaitForChild("CAM"):WaitForChild("Global"):WaitForChild("Utility"))
 vicvalues = Utility:getvaluesfolder(plrcharacter or npc/victim character)
 ```
+##Skill Storage
+A storage for serversided module scripts for skills, This can only be used on the server as creating unmanaged tables within the server module script for a skill is prohibited.
+```lua
+local skillStorage = require(game.ServerStorage.SAM.Utility.SkillStorage)
+--When u want to access a storage table for a skill
+local storageTable = SkillStorage:GetID(plr,skillname)
+--When ur done with it
+SkillStorage:ClearID(plr, skillname)
+```
+By default, the skill storage for a skill will be the last parameter on the server functions, the framework will automatically create it for you. It is cleared when the player leaves, otherwise you'd have to clean it manuelly. It is available on the Hold, unhold, and cancel function. You may print it to test if it is there, if a table is printed then it is there. **Remember that the second parameter is always the player's mouse position**.
+<figure markdown="span">
+![Image](imgs/skillstorage.png){ width="100%" align="left"}
+</figure>
 ##Getting a skill's status(Last used, or if it's being used)
 ```lua
 local manage_cd = require(game.ServerStorage:WaitForChild("SAM"):WaitForChild("Game_Play"):WaitForChild("manage_cd"))
