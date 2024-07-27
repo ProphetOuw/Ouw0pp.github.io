@@ -183,27 +183,6 @@ local ph = require(game.ReplicatedStorage:WaitForChild("CAM"):WaitForChild("Clie
 
 local mouse_pos = ph:mousepos(max depth(Optional))
 ```
-##Projectile skills guide
-Projectiles are done using shape casting or touched, up to you. You would create an invisible projectile on the server, then on the client do the same exact calculations, with same velocities, and starting position, but this time it will be the actual projectile. When a hit is registered on the client, all it will do is play the collision effect, on the server you will cast a hitbox when the invisible projectile's collision is registered. **YOU MAY DO THIS YOUR OWN WAY, BUT U MUST ALWAYS INCLUDE THE METHOD BELOW WITH PROJECTILES(Checker module method).**
-!!!Note "Important note"
-	If you're using touched, raycasting, or shapecasting to register a projectile collision, if that collision belongs to a Humanoid, make sure you check if that humanoid is available by using the checker module, if the return isn't nil then u can register the collision. **This must be done in both client(Subjective) and server collisions**
-```lua
-local results = workspace:Blockcast(CFF,newBird.Size * 1.35,newBird.CFrame.LookVector*20,hitParams)
-if results ~= nil and results.Instance ~= nil then
-	hit = results.Instance
-	
-	local distance = (results.Position - newBird.Position).Magnitude
-	Intersect = CFrame.lookAlong(newBird.Position + newBird.CFrame.LookVector * (distance - newBird.Size.Z * 0.5), newBird.CFrame.LookVector)
-end
-if hit ~= nil then
-	local victim = Utility:find_character_from_descendant(hit) -- does a couple repetitions until it gets to a humanoid from the child
-	if victim == nil then return/continue end;
-	if victim and victim == character then return/continue end;tring) ->
-	--** IMPORTANT
-	if checker:check_victim(script.Parent:GetFullName(),character,victim) == nil then return/continue end;
-	--**
-end
-```
 ##Getting mouse position on the server
 This is tricky because it uses both the server and the client module script. It creates a part on the server that the player has network ownership over, Then in the client module, that part's position is updated to the mouse position, since the player has network ownership over it, the position will also be updated on the server.
 ###Step 1: Creating the part on server script
@@ -233,6 +212,27 @@ You can either let the duration run out, and the part auto deletes itself or del
 ```lua
 local SM = require(game.ServerStorage:WaitForChild("SAM"):WaitForChild("Services"):WaitForChild("Server_Mouse_Pos"))
 SM:Delete_Pos_Part(Character,name of the part)
+```
+##Projectile skills guide
+Projectiles are done using shape casting or touched, up to you. You would create an invisible projectile on the server, then on the client do the same exact calculations, with same velocities, and starting position, but this time it will be the actual projectile. When a hit is registered on the client, all it will do is play the collision effect, on the server you will cast a hitbox when the invisible projectile's collision is registered. **YOU MAY DO THIS YOUR OWN WAY, BUT U MUST ALWAYS INCLUDE THE METHOD BELOW WITH PROJECTILES(Checker module method).**
+!!!Note "Important note"
+	If you're using touched, raycasting, or shapecasting to register a projectile collision, if that collision belongs to a Humanoid, make sure you check if that humanoid is available by using the checker module, if the return isn't nil then u can register the collision. **This must be done in both client(Subjective) and server collisions**
+```lua
+local results = workspace:Blockcast(CFF,newBird.Size * 1.35,newBird.CFrame.LookVector*20,hitParams)
+if results ~= nil and results.Instance ~= nil then
+	hit = results.Instance
+	
+	local distance = (results.Position - newBird.Position).Magnitude
+	Intersect = CFrame.lookAlong(newBird.Position + newBird.CFrame.LookVector * (distance - newBird.Size.Z * 0.5), newBird.CFrame.LookVector)
+end
+if hit ~= nil then
+	local victim = Utility:find_character_from_descendant(hit) -- does a couple repetitions until it gets to a humanoid from the child
+	if victim == nil then return/continue end;
+	if victim and victim == character then return/continue end;tring) ->
+	--** IMPORTANT
+	if checker:check_victim(script.Parent:GetFullName(),character,victim) == nil then return/continue end;
+	--**
+end
 ```
 ##Debris module / deleting / destroying
 I have a custom module that replaces debris and acts as a destroyer
