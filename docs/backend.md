@@ -485,6 +485,8 @@ By default, the skill storage for a skill will be the last parameter on the serv
 <figure markdown="span">
 ![Image](imgs/skillstorage.png){ width="100%" align="left"}
 </figure>
+!!!Warning "Please Remember"
+	Special functions like counters and toggles will not always have this at the third parameter.
 ##Getting a skill's status(Last used, or if it's being used)
 ```lua
 local manage_cd = require(game.ServerStorage:WaitForChild("SAM"):WaitForChild("Game_Play"):WaitForChild("manage_cd"))
