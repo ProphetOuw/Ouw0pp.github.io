@@ -488,7 +488,7 @@ By default, the skill storage for a skill will be the last parameter on the serv
 ![Image](imgs/skillstorage.png){ width="100%" align="left"}
 </figure>
 !!!Warning "Please Remember"
-	Special functions like counters and toggles will not always have this at the third parameter.
+	Special functions like counters and toggles will not always have this at the third parameter. When you are cleaning the table manuelly, you can't set skillstorage = {}, since this is just a reference, when you do this you are referencing it to a new table, You must instead require the SkillStorage module in serverstorage and run :ResetId like it is shown in the code snippet above.
 ##Getting a skill's status(Last used, or if it's being used)
 ```lua
 local manage_cd = require(game.ServerStorage:WaitForChild("SAM"):WaitForChild("Game_Play"):WaitForChild("manage_cd"))
