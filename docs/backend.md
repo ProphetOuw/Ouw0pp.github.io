@@ -504,6 +504,40 @@ pause_gameplay.Name = "pause_gameplay"
 pause_gameplay.Parent = plrvalues
 DebrisModule:AddItem(pause_gameplay,1.4)
 ```
+##More helpful values
+###skillslow value
+This value sets the player's walkspeed to 4.
+```lua
+local DebrisModule = require(game.ReplicatedStorage:WaitForChild("CAM"):WaitForChild("DebrisModule"))
+local Utility = require(game.ReplicatedStorage:WaitForChild("CAM"):WaitForChild("Global"):WaitForChild("Utility"))
+plrv = Utility:getvaluesfolder(plrcharacter or npc/victim character)
+local skils = Instance.new("BooleanValue")
+skils.Name = "skillslow"
+skils.Parent = plrv
+DebrisModule:AddItem(skils,2)
+```
+###skill_stand_still value
+This value sets the player's walkspeed to 0.
+```lua
+local DebrisModule = require(game.ReplicatedStorage:WaitForChild("CAM"):WaitForChild("DebrisModule"))
+local Utility = require(game.ReplicatedStorage:WaitForChild("CAM"):WaitForChild("Global"):WaitForChild("Utility"))
+plrv = Utility:getvaluesfolder(plrcharacter or npc/victim character)
+local skill_stand_still = Instance.new("BooleanValue")
+skill_stand_still.Name = "skill_stand_still"
+skill_stand_still.Parent = plrv
+DebrisModule:AddItem(skill_stand_still,2)
+```
+###NR value / disable auto rotate
+This value disables auto rotation, so the player's rotation will be locked.
+```lua
+local DebrisModule = require(game.ReplicatedStorage:WaitForChild("CAM"):WaitForChild("DebrisModule"))
+local Utility = require(game.ReplicatedStorage:WaitForChild("CAM"):WaitForChild("Global"):WaitForChild("Utility"))
+plrv = Utility:getvaluesfolder(plrcharacter or npc/victim character)
+local NR = Instance.new("BooleanValue")
+NR.Name = "NR"
+NR.Parent = plrv
+DebrisModule:AddItem(NR,2)
+```
 ##Updrafting
 Many skills will have the ability to propell a player, or a player and the victim being attacked into the air, we use two other functions within Combat_Util to achieve this.
 ###Updrafting one entity
