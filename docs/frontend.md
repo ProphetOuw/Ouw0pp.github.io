@@ -2,6 +2,7 @@
 If you're only assignment is to make the frontend for a specific skill or moveset, this is most likely as far as you will need to read.
 ## Important notes
  - Pressing E on ur keyboard stuns you and this should trigger skill canceling, you can use this to test canceling for skills.
+ - Q + A,W,S, or D to dash, this can also help you test skill behaviour.
  - Effect modules should contain effects and only effects, you will not maneuver or do anything with the character in the effects modules, that’s to be done in a separate script.
  - Front end developers must follow the front end layout/instructions listed in this page
  - If you do not have access to the group inventory, you will upload animations/sounds to your own inventory. If you are uploading animations, make sure to leave the keyframe sequence within the animation instance so that we may reupload it to the Ouw productions group.
