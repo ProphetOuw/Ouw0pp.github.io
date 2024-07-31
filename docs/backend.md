@@ -1,4 +1,6 @@
 #Skill backend framework/Skill articulation
+## Reminders
+ - Pressing E on ur keyboard stuns you and this should trigger skill canceling, you can use this to test canceling for skills.
 ##Getting Skills Ready
  Search “Character_Profiles” in the search bar, this module lets you add skills in so that they can work on the framework.
 <figure markdown="span">
