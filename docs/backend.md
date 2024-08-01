@@ -2,6 +2,7 @@
 ## Reminders
  - Pressing E on ur keyboard stuns you and this should trigger skill canceling, you can use this to test canceling for skills.
  - Q + A,W,S, or D to dash, this can also help you test skill behaviour.
+ - Sound volume should range from 50 to 250, if you're not sure a safe number is 200.
 ##Getting Skills Ready
  Search “Character_Profiles” in the search bar, this module lets you add skills in so that they can work on the framework.
 <figure markdown="span">
@@ -341,8 +342,8 @@ Here are description of some skill stats
    transparent = can be any value as long as it exists, turns the character invisible but it can be detected by npcs,etc.
 ]]
 ```
-!!!Warning "Warning"
-    Most of these are case sensitive. I might of also flipped the case for the first letter, if it doesn't work for you try, uppering or lowering the case.
+!!!Note "Important"
+    I use string.lower on all of these, so wether u write stuff in upper or lower case is irrelevant.
 ##Counter skills
 You setup a counter by having the property "Counter" in its skill stats
 ```lua title="In Character_Profiles"
