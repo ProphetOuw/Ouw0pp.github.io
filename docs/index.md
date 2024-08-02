@@ -16,7 +16,7 @@ If you are also a front end developer, these payments will be given ontop of the
  - 85,714 Robux or $300 - Hard Skill
 
 The difficulty in which a skill is assumed may change before or after the implementation is done, And it may change depending on the amount of work you'd have to do. If you are provided with resources, this may change the assumed difficulty.
-#### Code cleanelyness Bonus($ * #/4 )
+#### Code cleanelyness Bonus
  - 14,286 Robux or $50 - Decent code
  - 42,857 Robux or 150 - Super clean and good code
 
