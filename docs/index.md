@@ -31,6 +31,7 @@ If not given to you, if you think you deserve it you can get up to:
  - 28,571 Robux or $100
  - 57,143 Robux or $200
  - 85,714 Robux or $300
+
 As additional bonuses on a moveset.
 A 28,571 Robux - 57,143 Robux bonus, or its equivalence in usd will be given to all of the skills of your first moveset.
 #### My task as a front end developer
