@@ -26,6 +26,7 @@ The individual that'll determine the level of cleanelyness for your code may be 
  - 14,286 Robux or $50 - Minor changes need to be made to your code in order to adjust it for gameplay
  - 28,571 Robux or $100 - Skill is good gameplay wise
 ### Additional Bonuses
+
 If not given to you, if you think you deserve it you can get up to:
  - 28,571 Robux or $100
  - 57,143 Robux or $200
