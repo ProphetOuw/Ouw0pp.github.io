@@ -16,12 +16,12 @@ If you are also a front end developer, these payments will be given ontop of the
  - 85,714 Robux or $300 - Hard Skill
 
 The difficulty in which a skill is assumed may change before or after the implementation is done, And it may change depending on the amount of work you'd have to do. If you are provided with resources, this may change the assumed difficulty.
-#### Code cleanelyness Bonus
+#### Code cleanelyness Bonus($ * #/4 )
  - 14,286 Robux or $50 - Decent code
  - 42,857 Robux or 150 - Super clean and good code
 
 The individual that'll determine the level of cleanelyness for your code may be yourself(If you have shown to be knowledgeable) or someone within Ouw Productions who has been appointed to do so.
-#### Gameplay consideration Bonus($ * #/4 )
+#### Gameplay consideration Bonus
  - 0 Robux or $0 - No consideration/left it up to someone else
  - 14,286 Robux or $50 - Minor changes need to be made to your code in order to adjust it for gameplay
  - 28,571 Robux or $100 - Skill is good gameplay wise
