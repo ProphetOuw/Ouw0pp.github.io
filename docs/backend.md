@@ -532,7 +532,7 @@ skill_stand_still.Parent = plrv
 DebrisModule:AddItem(skill_stand_still,2)
 ```
 ###NOMouvementlines value
-This value disables the movement lines lol.
+This value disables the movement lines.
 ```lua
 local DebrisModule = require(game.ReplicatedStorage:WaitForChild("CAM"):WaitForChild("DebrisModule"))
 local Utility = require(game.ReplicatedStorage:WaitForChild("CAM"):WaitForChild("Global"):WaitForChild("Utility"))
