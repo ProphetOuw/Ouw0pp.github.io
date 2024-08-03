@@ -168,7 +168,7 @@ for i,v in pairs(models) do
 end
 
 ```
-The initiated.Both(...) function first checks if the value exists in the victim values, if it does then, it returns true letting the script know that the victim/target has priority, if it doesn't exist then it adds the value into _settings.pv(if it hasn't already been added)which is the player values folder, letting every other attacker know that the player has priority.
+The initiated.Both(...) function first checks if the value exists in the victim , if it does then, it returns true letting the script know that the victim/target has priority, if it doesn't exist then it adds the value into _settings.pv(if it hasn't already been added)which is the player  folder, letting every other attacker know that the player has priority.
 !!!Success "The importance of this procedure/module"
 	This module prevents players hitting each other at once, which helps the combat feel good. It is mandatory in most if not all skills
 
@@ -378,7 +378,7 @@ Here are the types of passive toggling
 <figure markdown="span">
 ![Image](imgs/pt.png){ width="100%" align="left"}
 </figure>
-I use the "Menum" medoule because i like it,but it is optional you can just pass the corresponding numeric values instead. When the skills are triggered the "Toggle" function within the client and server skill scripts will be fired. If duration is not specified, it will assume a default value.
+I use the "Menum" medoule because i like it,but it is optional you can just pass the corresponding numeric  instead. When the skills are triggered the "Toggle" function within the client and server skill scripts will be fired. If duration is not specified, it will assume a default value.
 ##A signaler for canceling(Not limited to skills framework)
 Skills are only cancelable while the hold state is running, if the unhold or cancel state is being ran, then the skill is considered ran and can not be canceld or unheld anymore, so when we have yields in our cancel or unhold functions, we use the ManuelCancel module to pick up canceling signals.
 ```lua title="In Some server or client script"
@@ -409,7 +409,7 @@ end
 ```
 There is also a hitbox casting function that does most of the work for you, it wraps the GetModelInRegion function.
 ```lua
-local hitDetected = function(target: Model, targetValues, targetState: 'Blocking' | 'Perfect' | true)
+local hitDetected = function(target: Model, target, targetState: 'Blocking' | 'Perfect' | true)
 	local targetHumanoid = target:FindFirstChild('Humanoid') :: Humanoid
 	local targetRoot = targetHumanoid.RootPart :: BasePart
 	--
@@ -530,6 +530,17 @@ local skill_stand_still = Instance.new("BooleanValue")
 skill_stand_still.Name = "skill_stand_still"
 skill_stand_still.Parent = plrv
 DebrisModule:AddItem(skill_stand_still,2)
+```
+###NOMouvementlines value
+This value disables the movement lines lol.
+```lua
+local DebrisModule = require(game.ReplicatedStorage:WaitForChild("CAM"):WaitForChild("DebrisModule"))
+local Utility = require(game.ReplicatedStorage:WaitForChild("CAM"):WaitForChild("Global"):WaitForChild("Utility"))
+plrv = Utility:getvaluesfolder(plrcharacter or npc/victim character)
+local NOMouvementlines = Instance.new("BooleanValue")
+NOMouvementlines.Name = "NOMouvementlines"
+NOMouvementlines.Parent = plrv
+DebrisModule:AddItem(NOMouvementlines,2)
 ```
 ###NR value / disable auto rotate
 This value disables auto rotation, so the player's rotation will be locked.
