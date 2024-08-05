@@ -28,6 +28,7 @@ The individual that'll determine the level of cleanelyness for your code may be 
 ### Additional Bonuses
 
 If not given to you, if you think you deserve it you can get up to:
+
  - 28,571 Robux or $100
  - 57,143 Robux or $200
  - 85,714 Robux or $300
