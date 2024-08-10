@@ -1,6 +1,6 @@
 #Skill backend framework/Skill articulation
 ## Reminders
- - There is free admin in studio, the prefix for it is double tap `;`
+ - There is free admin in studio, the prefix for it is double tap `;`.
  - Pressing E on ur keyboard stuns you and this should trigger skill canceling, you can use this to test canceling for skills.
  - Q + A,W,S, or D to dash, this can also help you test skill behaviour.
  - Sound volume should range from 50 to 250, if you're not sure a safe number is 200.
