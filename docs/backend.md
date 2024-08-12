@@ -508,6 +508,10 @@ local pause_gameplay = Instance.new("BoolValue")
 pause_gameplay.Name = "pause_gameplay"
 pause_gameplay.Parent = plrvalues
 DebrisModule:AddItem(pause_gameplay,1.4)
+
+--or
+local Utility = require(game.ReplicatedStorage:WaitForChild("Cam"):WaitForChild("Global"):WaitForChild("Utility))
+Utility:AddValue(parent: Instance, name: string, duration: number)
 ```
 ##More helpful values
 ###skillslow value
@@ -520,6 +524,10 @@ local skils = Instance.new("BooleanValue")
 skils.Name = "skillslow"
 skils.Parent = plrv
 DebrisModule:AddItem(skils,2)
+
+--or
+local Utility = require(game.ReplicatedStorage:WaitForChild("Cam"):WaitForChild("Global"):WaitForChild("Utility))
+Utility:AddValue(parent: Instance, name: string, duration: number)
 ```
 ###skill_stand_still value
 This value sets the player's walkspeed to 0.
@@ -531,6 +539,10 @@ local skill_stand_still = Instance.new("BooleanValue")
 skill_stand_still.Name = "skill_stand_still"
 skill_stand_still.Parent = plrv
 DebrisModule:AddItem(skill_stand_still,2)
+
+--or
+local Utility = require(game.ReplicatedStorage:WaitForChild("Cam"):WaitForChild("Global"):WaitForChild("Utility))
+Utility:AddValue(parent: Instance, name: string, duration: number)
 ```
 ###NOMouvementlines value
 This value disables the movement lines.
@@ -542,6 +554,10 @@ local NOMouvementlines = Instance.new("BooleanValue")
 NOMouvementlines.Name = "NOMouvementlines"
 NOMouvementlines.Parent = plrv
 DebrisModule:AddItem(NOMouvementlines,2)
+
+--or
+local Utility = require(game.ReplicatedStorage:WaitForChild("Cam"):WaitForChild("Global"):WaitForChild("Utility))
+Utility:AddValue(parent: Instance, name: string, duration: number)
 ```
 ###NR value / disable auto rotate
 This value disables auto rotation, so the player's rotation will be locked.
@@ -553,6 +569,10 @@ local NR = Instance.new("BooleanValue")
 NR.Name = "NR"
 NR.Parent = plrv
 DebrisModule:AddItem(NR,2)
+
+--or
+local Utility = require(game.ReplicatedStorage:WaitForChild("Cam"):WaitForChild("Global"):WaitForChild("Utility))
+Utility:AddValue(parent: Instance, name: string, duration: number)
 ```
 ##Updrafting
 Many skills will have the ability to propell a player, or a player and the victim being attacked into the air, we use two other functions within Combat_Util to achieve this.
