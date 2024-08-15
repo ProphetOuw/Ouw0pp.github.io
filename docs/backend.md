@@ -176,7 +176,9 @@ The initiated.Both(...) function first checks if the value exists in the victim 
 ##Forcing a skill action(Hold,Unhold,Cancel)
  Hold Will only work if there are no other skills being held, and will work like a tap. unHold and Cancel will only work if said skill is being held.
 ```lua title="Some server script"
-game.ReplicatedStorage.Communication.SnC.Effects.RE:FireClient(plr,"force_skill_actions_server","skillname(Case sensitive)","Cancel")
+game.ReplicatedStorage.Communication.SnC.Effects.RE:FireClient(plr,"force_skill_actions_server","skillname(Case sensitive)","Cancel",cooldown: boolean, replicate: boolean)
+--cooldown helps you control wether or not the skill will have a cooldown. It is recommended to just leave this blank
+--replicate param helps you control wether or not the action gets replicated to the server, this is recommended to be left blank as well, in which case it would replicate to the server, this is so you woudn't have to do any special measures on the server like setting the ids manuelly/
 ```
 As you can see this uses the same remote i use to fire effects to play. The frontend skill effects framework is not limited to skill effects.
 ###Use case
