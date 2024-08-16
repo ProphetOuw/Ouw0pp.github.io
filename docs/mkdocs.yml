@@ -6,6 +6,8 @@ extra:
     - '<meta property="og:image" content="URL_to_an_image.png">'
     - '<meta property="og:url" content="https://11ouw0pp11.github.io/Ouw0pp.github.io/">'
     - '<meta property="og:type" content="website">'
+plugins:
+  - search
 theme:
   name: material
   features:
