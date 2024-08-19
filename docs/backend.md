@@ -1,5 +1,6 @@
 #Skill backend framework/Skill articulation
 ## Reminders
+ - **IF YOU ARE TO RESKIN ANY SKILL YOU MUST TAKE THEM FROM THE MAIN PLACES, NOT THE DEV PLACES**
  - There is free admin in studio, the prefix for it is double tap `;`.
  - Pressing E on ur keyboard stuns you and this should trigger skill canceling, you can use this to test canceling for skills.
  - Q + A,W,S, or D to dash, this can also help you test skill behaviour.
