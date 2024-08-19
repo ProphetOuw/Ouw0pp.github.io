@@ -585,7 +585,7 @@ combat_util:Add_air_combo_bp(character humanoid root part,optional but can not b
 --startpos is the ground position
 --customy is the distance from the ground
 ```
-The reason why the second parameter is optional and must exist, is because it is required when updrafting two entities, the function that updrafts two entities uses this function. So its space must be regarded.
+The reason why the second parameter is optional and must exist, is because it is required when updrafting two entities, the function that updrafts two entities uses this function. So its space must be regarded. Set it to the caster's humanoid root part for the target's network owner to be set to the caster if it is not a player.
 ###Updrafting two entities
 ```lua
 local combat_util = require(game.ServerStorage:WaitForChild("SAM"):WaitForChild("Services"):WaitForChild("Combat_Util"));
