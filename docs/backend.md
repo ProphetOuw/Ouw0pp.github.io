@@ -339,7 +339,7 @@ Here are description of some skill stats
     
    Block_Pierce --this is read only, notifies skill stats that this skill ignores block but does not damage while blocking
    
-   Strict_Stun --this is read only, notifies skill strictly stuns, no blocking during the stun etc
+   Strict_Stun --gives the skill a strict stun meaning victims are disabled from doing anything, regular stun has some exceptions, strict stun doesn't.
    
    Counter = 1,2,3 -- 1 = combat, 2 = everything, 3 = skills only
   
