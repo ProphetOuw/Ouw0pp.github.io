@@ -371,7 +371,9 @@ Then when the counter is trigured, the "Counter" function in both the server and
 Skills that u initiate and then toggle later, like a landmine skill that u can explode later.
 ```lua title="Some server skill module"
 local skill_switch = require(game.ReplicatedStorage:WaitForChild("CAM"):WaitForChild("Global"):WaitForChild("Subsets"):WaitForChild("Gameplay"):WaitForChild("Skill_Switch_Adder"))
-skill_switch:Add(plr, switch name, Duration(Optional?))
+local object = skill_switch:Add(plr, switch name, Duration(Optional?))
+
+--add a any value(boolean,string,etc) with the name "Disabled" within the object to disable it.
 ```
 This will create a noticeable effect on the button icon, when that button is pressed again the "Switch" function will be fired on the server and client module. If duration is not specified, it will assume a default value.
 ##Skill passive toggling
