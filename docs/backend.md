@@ -1,7 +1,7 @@
 #Skill backend framework/Skill articulation
 ## Reminders
  - **IF YOU ARE TO RESKIN ANY SKILL YOU MUST TAKE THEM FROM THE MAIN PLACES, NOT THE DEV PLACES**.
- - Strict Stun can only be added through a skill's stats
+ - Strict Stun can only be added through a skill's stats.
  - Updrafting should go through regardless of if the target's blocking or not.
  - Add simple repetitive vfx functions(Emit,delete,etc) into the vfxutility if not there already and use them from that module. This module **SHOULD ONLY BE EDITED IN DX MAIN PLACE THEN PUBLISHED**.
  - There is free admin in studio, the prefix for it is double tap `;`.
@@ -580,6 +580,11 @@ DebrisModule:AddItem(NR,2)
 local Utility = require(game.ReplicatedStorage:WaitForChild("Cam"):WaitForChild("Global"):WaitForChild("Utility))
 Utility:AddValue(parent: Instance, name: string, duration: number)
 ```
+##How to know if a skill was unheld due to being held for the maximum amount of time
+Setting the varialbe in a skill's data(not skill stat, skill data) will make it so the third parameter is true if expired cuz the skill reached its max hold time or nil if the player unheld the key. having this feature enabled for your skill(s) pushes the skillstorage to the 4th parameter.
+<figure markdown="span">
+![Image](imgs/unholdstate.jpeg){ width="75%" align="left"}
+</figure>
 ##Updrafting
 Many skills will have the ability to propell a player, or a player and the victim being attacked into the air, we use two other functions within Combat_Util to achieve this.
 ###Updrafting one entity
