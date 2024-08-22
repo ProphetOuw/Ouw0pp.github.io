@@ -2,6 +2,7 @@
 ## Reminders
  - **IF YOU ARE TO RESKIN ANY SKILL YOU MUST TAKE THEM FROM THE MAIN PLACES, NOT THE DEV PLACES**.
  - Strict Stun can only be added through a skill's stats
+ - Updrafting should go through regardless of if the target's blocking or not.
  - Add simple repetitive vfx functions(Emit,delete,etc) into the vfxutility if not there already and use them from that module. This module **SHOULD ONLY BE EDITED IN DX MAIN PLACE THEN PUBLISHED**.
  - There is free admin in studio, the prefix for it is double tap `;`.
  - Pressing E on ur keyboard stuns you and this should trigger skill canceling, you can use this to test canceling for skills.
