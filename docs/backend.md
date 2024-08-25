@@ -2,6 +2,7 @@
 ## Reminders
  - **IF YOU ARE TO RESKIN ANY SKILL YOU MUST TAKE THEM FROM THE MAIN PLACES, NOT THE DEV PLACES**.
  - Make sure tables within skill storage are cleared consistently, you don't want to use past data on new occurences.
+ - All align positions, or any body movers that may disrupt the updrafting functions must be named "air_combo_bp" so that the scripts delete them prior to updrafting.
  - Updrafting functions are  not limited to updrafting, they are a good way to maintain a entity floating mid air by setting a custom Y position, the function will return an attachment which u can delete when needed to.
  - Strict Stun can only be added through a skill's stats, unless you set noautomation to true, it is the 5th parameter of combatutitlity:AddStun or combatutility:Add_Strict_Stun.
  - Updrafting should go through regardless of if the target's blocking or not.
