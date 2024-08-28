@@ -283,7 +283,7 @@ local Event,Send,Remove = ServerClientLink:New(plr,string: conneciton name,int: 
 Event:Connect(function(param1,param2,...,paramn)
     --do something with the signal received from the client
 end)
-Send(param1,param2,...,paramn) --send signal to client
+Send(yield (true for function, false for event),param1,param2,...,paramn) --send signal to client
 task.wait(5)
 Remove() --delete the signal, this will automatically be done after the duration
 ```
