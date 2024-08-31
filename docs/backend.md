@@ -540,6 +540,21 @@ DebrisModule:AddItem(skils,2)
 local Utility = require(game.ReplicatedStorage:WaitForChild("Cam"):WaitForChild("Global"):WaitForChild("Utility))
 Utility:AddValue(parent: Instance, name: string, duration: number)
 ```
+###FOV Value/Setting custom **FIELD OF VIEW** to the camera
+```lua
+local DebrisModule = require(game.ReplicatedStorage:WaitForChild("CAM"):WaitForChild("DebrisModule"))
+local Utility = require(game.ReplicatedStorage:WaitForChild("CAM"):WaitForChild("Global"):WaitForChild("Utility"))
+plrv = Utility:getvaluesfolder(plrcharacter or npc/victim character)
+local FOV = Instance.new("IntValue")
+FOV.Name = "FOV"
+FOV.Value = 70;
+FOV.Parent = plrv
+DebrisModule:AddItem(FOV,2)
+--This value also accepts a "Priority" attribute in the case of overlapping. The higher the priority the more it is prioritized over other FOV values in the same values folder.
+--or
+local Utility = require(game.ReplicatedStorage:WaitForChild("Cam"):WaitForChild("Global"):WaitForChild("Utility))
+Utility:AddValue(parent: Instance, name: string, duration: number)
+```
 ###skill_stand_still value
 This value sets the player's walkspeed to 0.
 ```lua
