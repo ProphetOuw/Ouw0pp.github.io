@@ -115,7 +115,9 @@ If the skill you’re working on has states you may want to disregard the distan
 ```lua title="Still within the Fireball effects module"
 return function(player,state,direction)
 	--**------------**--
-	if (plr.Character.HumanoidRootPart.Position-workspace.CurrentCamera.CFrame.Position).Magnitude >= 250 and state ~= "cancel" then return end;
+	if (plr.Character.HumanoidRootPart.Position-workspace.CurrentCamera.CFrame.Position).Magnitude >= 250 and state ~= "cancel" then
+		--Do cleanup logic in here incase the distance is above 250 and the state isn't "cancel", if you don't do this then the effects will just be stuck in the world forever.
+	 return end;
 	--**------------**--
 end
 ```
